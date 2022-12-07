@@ -1,0 +1,29 @@
+﻿body {
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+.cont-drop {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#DropDownAuto {
+    width: 290px;
+}
+
+.cont-garanz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.con-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
