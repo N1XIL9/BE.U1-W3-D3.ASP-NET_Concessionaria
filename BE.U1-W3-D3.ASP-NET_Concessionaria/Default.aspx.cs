@@ -22,7 +22,7 @@ namespace BE.U1_W3_D3.ASP_NET_Concessionaria
 
         }
 
-        Auto vettura = new Auto();
+        
         protected void DropDownAuto_SelectedIndexChanged(object sender, EventArgs e)
         {
             string AutoScelta = DropDownAuto.SelectedItem.Text;
@@ -59,33 +59,39 @@ namespace BE.U1_W3_D3.ASP_NET_Concessionaria
                 PrezzoBase.Text = $"Prezzo di listino: {Prezzo.ToString("c2")}";
             }
 
-            vettura.Modello = AutoScelta;
-
-            AggiungiOptonal();
+          
         }
 
 
-        public void AggiungiOptonal()
+     
+        protected void Button1_Click(object sender, EventArgs e)
         {
+            Configurazione.Visible = true;
+
             string optional = "";
             decimal TotOptional = 0;
+            double TotOpt = 0;
+            double TotMod = 0;
+            double Garanzia = Convert.ToDouble(ddlGaranzia.SelectedItem.Value);
+            double TotGar = Garanzia * 120;
 
             foreach (ListItem opt in cblOptional.Items)
             {
                 if (opt.Selected)
                 {
-                    optional += $" - {opt.Text}";
+                    optional += $" - {opt.Text} ";
                     TotOptional += Convert.ToInt32(opt.Value);
                 }
             }
-            vettura.Optional = optional;
-        }
 
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            string garanzia = ddlGaranzia.SelectedItem.ToString();
-            Configurazione.Visible = false;
+            TotOpt = Convert.ToDouble(TotOptional);
+            TotMod = Convert.ToDouble(DropDownAuto.SelectedItem.Value);
+            double TotCompl = TotMod + TotOpt + TotGar;
+
+            ListaConfig.Text = $"Totale Modello: {TotMod.ToString("c2")}<br />Totale Optional: {TotOpt.ToString("c2")}<br />Totale Garanzia: {TotGar.ToString("c2")}<br />";
+
+            TotConfig.Text = $"Totale Complessivo: {TotCompl.ToString("c2")}";
 
         }
     }

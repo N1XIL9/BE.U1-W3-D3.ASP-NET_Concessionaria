@@ -78,6 +78,15 @@ namespace BE.U1_W3_D3.ASP_NET_Concessionaria
         protected global::System.Web.UI.WebControls.DropDownList ddlGaranzia;
 
         /// <summary>
+        /// Controllo Button1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
         /// Controllo Configurazione.
         /// </summary>
         /// <remarks>
@@ -103,14 +112,5 @@ namespace BE.U1_W3_D3.ASP_NET_Concessionaria
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label TotConfig;
-
-        /// <summary>
-        /// Controllo Button1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

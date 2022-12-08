@@ -13,8 +13,8 @@
     <form id="form1" runat="server">
        <div class="container cont-drop">
             <h1>CONFIGURA LA TUA AUTO</h1>
-            <div class="row ">
-                <div class="col-6">
+            <div class="row cont-drop">
+                <div class="col">
                     <asp:DropDownList ID="DropDownAuto" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownAuto_SelectedIndexChanged"
                          CssClass="FormControl">
                         <asp:ListItem Value="0" Text=""></asp:ListItem>
@@ -26,7 +26,7 @@
                         <asp:ListItem Value="28500" Text=""></asp:ListItem>
                     </asp:DropDownList>
                 </div>
-                <div class="col-6">
+                <div class="col">
                     <div class="card" style="width: 18rem;">
                         <asp:Image ID="Image1" runat="server" />
                         <div class="card-body">
@@ -44,13 +44,13 @@
             <div class="row text-center">
                 <div>
                     <asp:CheckBoxList ID="cblOptional" CssClass="form-control" RepeatColumns="3" runat="server">
-                        <asp:ListItem Text="Vernice metallizzata nera (+ 1250,00 €)" Value="250"></asp:ListItem>
-                        <asp:ListItem Text="Vernice metallizzata gialla (+ 3450,00 €)" Value="250"></asp:ListItem>
-                        <asp:ListItem Text="Vernice metallizzata verde (+ 4250,00 €)" Value="250"></asp:ListItem>
+                        <asp:ListItem Text="Vernice metallizzata nera (+ 1250,00 €)" Value="1250"></asp:ListItem>
+                        <asp:ListItem Text="Vernice metallizzata gialla (+ 3450,00 €)" Value="3450"></asp:ListItem>
+                        <asp:ListItem Text="Vernice metallizzata verde (+ 4250,00 €)" Value="4250"></asp:ListItem>
                  
-                        <asp:ListItem Text="Vernice opaca nera (+ 2250,00 €)" Value="250"></asp:ListItem>
-                        <asp:ListItem Text="Vernice opaca bianca (+ 3250,00 €)" Value="250"></asp:ListItem>
-                        <asp:ListItem Text="Vernice opaca grigio (+ 5250,00 €)" Value="250"></asp:ListItem>
+                        <asp:ListItem Text="Vernice opaca nera (+ 2250,00 €)" Value="2250"></asp:ListItem>
+                        <asp:ListItem Text="Vernice opaca bianca (+ 3250,00 €)" Value="3250"></asp:ListItem>
+                        <asp:ListItem Text="Vernice opaca grigio (+ 5250,00 €)" Value="5250"></asp:ListItem>
                         </asp:CheckBoxList>
                 </div>
             </div>
@@ -69,16 +69,15 @@
                     </asp:DropDownList>
                 </div>
             </div>
+                <asp:Button ID="Button1" runat="server" Text="Calcola preventivo" onclick="Button1_Click"/>
         </div>
         <div id="Configurazione" runat="server">
-            <asp:Label ID="ListaConfig" runat="server" Text=""></asp:Label>
-            <asp:Label ID="TotConfig" Font-Bold="true" ForeColor="CadetBlue" Font-Size="28px" runat="server" Text=""></asp:Label>
-        </div>
-        <div class="container con-btn">
-            <div>
-                <asp:Button ID="Button1" runat="server" Text="Calcola preventivo" onclick="Button1_Click"/>
+            <div class=" cont-tot">
+                <asp:Label ID="ListaConfig" runat="server" Text=""></asp:Label>
+                <asp:Label ID="TotConfig" Font-Bold="true" ForeColor="CadetBlue" Font-Size="28px" runat="server" Text=""></asp:Label>
             </div>
         </div>
+       
     </form>
 </body>
 </html>
